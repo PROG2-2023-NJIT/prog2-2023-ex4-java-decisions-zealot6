@@ -1,5 +1,3 @@
-package prog2.exercise4.flight.booking.system;
-
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -106,11 +104,7 @@ public class FlightBooking
 
         this.DepartingDate = DepartingDate;
     }
-    public void setReturnDate(LocalDate ReturnDate)
-    {
-
-        this.ReturnDate = ReturnDate;
-    }
+    
     public void setTotalPassengers(int totalPassengers, int TotalPassengers)
     {
 
@@ -424,6 +418,17 @@ public class FlightBooking
             TotalTicketPrice = (((ChildPassengers *((300 + (0.1*300)) + (0.05*300))) + (AdultPassengers*((300 + (0.1*300)) + (0.05*300)))) + 250)*2;
             return TotalTicketPrice;
         }
-       
-}
-
+      
+    public LocalDate setDepartureDate(LocalDate departureDate)
+    {
+        this.DepartingDate = departureDate;
+        return departureDate;
+    }
+    
+    public LocalDate setReturnDate(LocalDate returnDate)
+    {
+        this.ReturnDate = returnDate;
+        ReturnDate = DepartingDate.plusDays(2);
+        return ReturnDate;
+    }
+ }
