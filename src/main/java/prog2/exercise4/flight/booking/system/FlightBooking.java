@@ -1,4 +1,5 @@
 
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.text.ParseException;
@@ -10,7 +11,7 @@ import javax.sql.rowset.CachedRowSet;
 
 import java.time.LocalDate;
 
-public class FlightBooking
+public class FlightBooking 
  {
     private String TicketNumber;
     private String  PassengerFullName;
@@ -234,7 +235,7 @@ public class FlightBooking
             }
         }
 
-        public void setTripDestination(String source, String destination)
+        public void setTripDestination(String source , String destination)
         {
             switch(source)
             {
@@ -285,7 +286,6 @@ public class FlightBooking
                 case "5":
                 this.destination = TripDestination.HELSINKI;
                 break;
-
                 case "6":
                 this.destination = TripDestination.PARIS;
                 break;
@@ -313,43 +313,34 @@ public class FlightBooking
                 case FIRST:
                 TicketNumber += "F";
                 break;
-
                 case BUSINESS:
                 TicketNumber += "B";
                 break;
-
                 case ECONOMY:
                 TicketNumber += "E";
                 break;
             }
 
             TicketNumber += "6666";
-            
             boolean isPrime1 = true;
             boolean isPrime2 = false;
-
             switch(source)
             {
                 case NANJING:
                 isPrime1 =true;
                 break;
-
                 case BEIJING:
                 isPrime1 = true;
                 break;
-
                 case SHANGHAI:
                 isPrime1 = true;
                 break;
-
                 case OULU:
                 isPrime1 = false;
                 break;
-
                 case HELSINKI:
                 isPrime1 = false;
                 break;
-
                 case PARIS:
                 isPrime1 = false;
                 break;
@@ -361,23 +352,18 @@ public class FlightBooking
                 case NANJING:
                 isPrime2 = true;
                 break;
-
                 case BEIJING:
                 isPrime2 = true;
                 break;
-
                 case SHANGHAI:
                 isPrime2 = true;
                 break;
-
                 case OULU:
                 isPrime2 = false;
                 break;
-
                 case HELSINKI:
                 isPrime2 = false;
                 break;
-
                 case PARIS:
                 isPrime2 = false;
                 break;
