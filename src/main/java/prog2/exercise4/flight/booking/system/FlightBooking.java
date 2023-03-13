@@ -1,4 +1,4 @@
-
+package prog2.exercise4.flight.booking.system;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
